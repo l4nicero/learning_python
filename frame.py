@@ -56,6 +56,17 @@ for j in range(len(s)):
     for k in range(len(s)): #line 54 + 55 = 3x3 loops
         print(i, k, dna[i])
         i +=1
+        
+#in class
+    #single loop
+for i in range(len(dna)):
+    print(i, i % 3, dna[i])
+    
+    #nested loop
+for i in range(0, len(dna), 3):
+    for f in range(3):
+        c = i + f #coordinate
+        print(c, f, dna[c])
 
 """
 0 0 A

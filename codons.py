@@ -17,11 +17,18 @@ for i in range(1, len(dna)-2, 3):
 '''
     
 #for all frames
-for f in range(3): #for number of ranges
+step = 3
+for f in range(46): #for number of ranges
     print('frame', f)
-    for i in range(f, len(dna) -2, 3): #generic: len(dna) -k +2
-        codon = dna[i:i+3] #define codon in case of loop
+    for i in range(f, len(dna) -step +1, step): #generic: len(dna) -k +2
+        codon = dna[i:i+step] #define codon in case of loop
         print(codon)
+        
+#for kmers. you can change k to any number to fit any window size
+k = 4
+for i in range(0, len(dna) -k+1):
+    kmer = dna [i:i+4]
+    print(kmer)
 
 """
 frame 0
