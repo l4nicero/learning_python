@@ -7,9 +7,6 @@ import sys
 # Command line:
 #	python3 pepsearch.py IAN
 
-import gzip
-import sys
-
 def read_fasta(filename):
 	name = None
 	seqs = []
@@ -37,8 +34,12 @@ def read_fasta(filename):
 	yield(name, ''.join(seqs))
 	fp.close()
     
+protein_file = sys.argv[1]
+pattern = sys.argv[2]
+
 for name, seq in read_fasta('proteins.fasta.gz'):
-	print(name, seq)
+	if pattern in seq:
+		print(seq)
 """
 python3 pepsearch.py proteins.fasta.gz IAN | wc -w
 	43
