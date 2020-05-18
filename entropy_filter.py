@@ -47,7 +47,7 @@ def entropy(seq, w):
 			h = 0
 		for i in range(len(p)):
 			h -= p[i] * math.log2(p[i])
-			if h < 0.000001:
+			if h < 0.00001:
 				h = 0
 	return float(h)
 		
