@@ -50,41 +50,41 @@ def translate(seq):
 		codon = seq[i:i+3]
 		if codon[0] == 'A':
 			if codon[1] == 'A':
-				if codon[2] == 'A' or codon[2] == 'G': 	prt.append('K')
-				elif codon[2] == 'C' or codon[2] == 'T':	prt.append('N')
-			elif codon[1] == 'C':						prt.append('T')
+				if codon[2] == 'A' or codon[2] == 'G':						prt.append('K')
+				elif codon[2] == 'C' or codon[2] == 'T':					prt.append('N')
+			elif codon[1] == 'C':											prt.append('T')
 			elif codon[1] == 'G':
-				if codon[2] == 'A' or codon[2] == 'G':	prt.append('R')
-				elif codon[2] == 'C' or codon[2] == 'T':	prt.append('S')
+				if codon[2] == 'A' or codon[2] == 'G':						prt.append('R')
+				elif codon[2] == 'C' or codon[2] == 'T':					prt.append('S')
 			elif codon[1] == 'T':
-				if codon[2] == 'G':						prt.append('M')
+				if codon[2] == 'G':											prt.append('M')
 				elif codon[2] == 'A' or codon[2] == 'C' or codon[2] == 'T':	prt.append('I')
 		elif codon[0] == 'C':
 			if codon[1] == 'A':
-				if codon[2] == 'A' or codon[2] == 'G': prt.append('Q')
-				elif codon[2] == 'C' or codon[2] == 'T': prt.append('H')
-			elif codon[1] == 'C': prt.append('P')
-			elif codon[1] == 'G': prt.append('R')
-			elif codon[1] == 'T': prt.append('L')
+				if codon[2] == 'A' or codon[2] == 'G':						prt.append('Q')
+				elif codon[2] == 'C' or codon[2] == 'T':					prt.append('H')
+			elif codon[1] == 'C':											prt.append('P')
+			elif codon[1] == 'G':											prt.append('R')
+			elif codon[1] == 'T':											prt.append('L')
 		elif codon[0] == 'G':
 			if codon[1] == 'A':
-				if codon[2] == 'A' or codon[2] == 'G': prt.append('E')
-				elif codon[2] == 'C' or codon[2] == 'T': prt.append('D')
-			elif codon[1] == 'C': prt.append('A')
-			elif codon[1] == 'G': prt.append('G')
-			elif codon[1] == 'T': prt.append('V')
+				if codon[2] == 'A' or codon[2] == 'G':						prt.append('E')
+				elif codon[2] == 'C' or codon[2] == 'T':					prt.append('D')
+			elif codon[1] == 'C':											prt.append('A')
+			elif codon[1] == 'G':											prt.append('G')
+			elif codon[1] == 'T':											prt.append('V')
 		elif codon[0] == 'T':
 			if codon[1] == 'A':
-				if codon[2] == 'A' or codon[2] == 'G': prt.append('*')
-				elif codon[2] == 'C' or codon[2] == 'T': prt.append('Y')
+				if codon[2] == 'A' or codon[2] ==G':						'prt.append('*')
+				elif codon[2] == 'C' or codon[2] == 'T':					prt.append('Y')
 			elif codon[1] == 'C': prt.append('S')
 			elif codon[1] == 'G':
 				if codon[2] == 'A': prt.append('*')
-				elif codon[2] == 'C' or codon[2] == 'T': prt.append('C')
-				elif codon[2] == 'G': prt.append('W')
+				elif codon[2] == 'C' or codon[2] == 'T':					prt.append('C')
+				elif codon[2] == 'G':										prt.append('W')
 			elif codon[1] == 'T':
-				if codon[2] == 'A' or codon[2] == 'G': prt.append('L')
-				elif codon[2] == 'C' or codon[2] == 'T': prt.append('F')		
+				if codon[2] == 'A' or codon[2] == 'G':						prt.append('L')
+				elif codon[2] == 'C' or codon[2] == 'T':					prt.append('F')		
 	return ''.join(prt)	
 
 arg = parser.parse_args()	
