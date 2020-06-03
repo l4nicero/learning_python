@@ -93,4 +93,5 @@ while True:
 		if nxt == '*': break
 		word.append(nxt)
 	if len(word) > 2:
-		print(''.join(word))
+		name = ''.join(word)
+		print(name.capitalize())
